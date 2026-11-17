@@ -2,19 +2,38 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "net.agentsignal/mcp",
   "title": "AgentSignal",
-  "description": "Let an agent notify a human, or ask one and wait. Push notifications to iPhone/iPad/Mac, agent inboxes, and signed webhooks — idempotent sends, scheduling, groups, and x402 pay-as-you-go with no account.",
+  "description": "One call reaches an agent inbox, a signed webhook, or a person's iPhone, iPad and Mac.",
   "version": "0.2.74",
-  "repository": { "url": "https://github.com/Data-Group-AI/agentsignal", "source": "github" },
+  "repository": {
+    "url": "https://github.com/Data-Group-AI/agentsignal",
+    "source": "github"
+  },
   "packages": [
     {
       "registryType": "npm",
       "identifier": "@agentsignalnet/mcp",
       "version": "0.2.74",
-      "transport": { "type": "stdio" },
+      "transport": {
+        "type": "stdio"
+      },
       "environmentVariables": [
-        { "name": "AGENTSIGNAL_API_KEY", "description": "Account or sandbox key from the AgentSignal dashboard. Optional — with no env the server offers no-account x402 tools.", "isRequired": false, "isSecret": true },
-        { "name": "AGENTSIGNAL_JOIN_TOKEN", "description": "Join token (as_join_…) to register as an addressable agent on first use.", "isRequired": false, "isSecret": true },
-        { "name": "AGENTSIGNAL_BASE_URL", "description": "Override API base URL (default https://api.agentsignal.net).", "isRequired": false }
+        {
+          "name": "AGENTSIGNAL_API_KEY",
+          "description": "Account or sandbox key from the AgentSignal dashboard. Optional \u2014 with no env the server offers no-account x402 tools.",
+          "isRequired": false,
+          "isSecret": true
+        },
+        {
+          "name": "AGENTSIGNAL_JOIN_TOKEN",
+          "description": "Join token (as_join_\u2026) to register as an addressable agent on first use.",
+          "isRequired": false,
+          "isSecret": true
+        },
+        {
+          "name": "AGENTSIGNAL_BASE_URL",
+          "description": "Override API base URL (default https://api.agentsignal.net).",
+          "isRequired": false
+        }
       ]
     }
   ]
