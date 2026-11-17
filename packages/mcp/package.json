@@ -1,0 +1,53 @@
+{
+  "name": "@agentsignalnet/mcp",
+  "version": "0.2.73",
+  "publishConfig": {
+    "access": "public"
+  },
+  "description": "MCP server for AgentSignal \u2014 let an agent notify a human, or ask one and wait.",
+  "license": "SEE LICENSE IN LICENSE",
+  "type": "module",
+  "bin": {
+    "agentsignal-mcp": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --clean",
+    "prepare": "pnpm run build",
+    "typecheck": "tsc --noEmit",
+    "test": "AGENTSIGNAL_NO_KEYCHAIN=1 vitest run --passWithNoTests"
+  },
+  "dependencies": {
+    "@agentsignalnet/sdk": "workspace:*",
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.2",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.12",
+    "tsx": "^4.19.2",
+    "@agentsignalnet/core": "workspace:*"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "homepage": "https://agentsignal.net",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Data-Group-AI/agentsignal.git",
+    "directory": "packages/mcp"
+  },
+  "keywords": [
+    "agents",
+    "agentsignal",
+    "mcp",
+    "mcp-server",
+    "model-context-protocol",
+    "notifications",
+    "push-notifications"
+  ]
+}

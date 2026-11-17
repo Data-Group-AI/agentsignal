@@ -1,0 +1,15 @@
+{
+  "name": "agentsignal",
+  "version": "0.0.0",
+  "description": "Push notifications for agents \u2014 MCP server, SDK and CLI for the AgentSignal service at agentsignal.net",
+  "license": "SEE LICENSE IN LICENSE",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Data-Group-AI/agentsignal.git"
+  },
+  "homepage": "https://agentsignal.net",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ]
+}

@@ -1,0 +1,7 @@
+packages:
+  - "apps/api"
+  - "apps/web"
+  - "packages/*"
+  # Not a Worker. It needs a real UDP socket, which is the whole reason it
+  # exists, so it runs on a host of its own.
+  - "services/*"

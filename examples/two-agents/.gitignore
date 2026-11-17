@@ -1,0 +1,3 @@
+# Written by host-a.sh / host-b.sh. Holds an API key, a device
+# credential and a credit token, none of which can be recovered.
+agentsignal.env

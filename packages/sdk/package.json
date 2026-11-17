@@ -1,0 +1,53 @@
+{
+  "name": "@agentsignalnet/sdk",
+  "version": "0.2.73",
+  "publishConfig": {
+    "access": "public"
+  },
+  "description": "Push notifications for agents. Deliver a short, high-signal message to a specific human's devices, right now.",
+  "license": "SEE LICENSE IN LICENSE",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "prepare": "pnpm run build",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run --passWithNoTests"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.2",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.12"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@agentsignalnet/core": "workspace:*"
+  },
+  "homepage": "https://agentsignal.net",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Data-Group-AI/agentsignal.git",
+    "directory": "packages/sdk"
+  },
+  "keywords": [
+    "agents",
+    "agentsignal",
+    "notifications",
+    "push-notifications",
+    "sdk",
+    "typescript"
+  ]
+}
